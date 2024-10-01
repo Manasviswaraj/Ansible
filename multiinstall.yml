@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: "multi instasll"
+      apt:
+        name:
+          - apache2
+          - ntp
+          - ngnix
+        state: present 
